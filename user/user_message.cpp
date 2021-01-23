@@ -4,19 +4,19 @@
 namespace user{
 
   void message::serialize(char* const buffer, int len) const {
-    memcpy(buffer, &a, sizeof(a));
+    memcpy(buffer, &v_, sizeof(v_));
   }
 
   void message::deserialize(const char* const buffer, int len) {
-    memcpy(&a, buffer, sizeof(a));
+    memcpy(&v_, buffer, sizeof(v_));
   }
 
-  int message::get_serialize_size() const {
-    return sizeof(a);
+  void message::set_v(int v) {
+    v_ = v;
   }
 
   void message::print() const {
-    std::cout << a << std::endl;
+    std::cout << v_ << std::endl;
   }
 
 }

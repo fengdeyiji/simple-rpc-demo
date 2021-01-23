@@ -20,9 +20,6 @@ void Monitor::send(const T &msg, char* buffer, int len) {// 未考虑缓冲区�
   int pos = 0;
   memcpy(&buffer[pos], &id, sizeof(id));
   pos += sizeof(id);
-  int data_len = msg.get_serialize_size();
-  memcpy(&buffer[pos], &data_len, sizeof(data_len));
-  pos += sizeof(data_len);
   msg.serialize(&buffer[pos], len - pos);
 }
 
