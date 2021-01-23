@@ -14,7 +14,7 @@ namespace user{
   void message::set_v(int v) {
     v_ = v;
   }
-
+  
   void message::print() const {
     std::cout << v_ << std::endl;
   }
