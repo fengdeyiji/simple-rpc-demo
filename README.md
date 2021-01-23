@@ -13,8 +13,9 @@ namespace user{
     // 消息的反序列化
     void deserialize(const char* const buffer, int len);
     void print() const;
+    void set_v(int v);
   private:
-    int a = 12345;
+    int v_ = 0;
   };
 }
 namespace rpc{
