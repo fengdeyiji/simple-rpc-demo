@@ -57,8 +57,9 @@ REGISTER(user::message, 1)
 int main() {
   char buffer[buffer_len];
   user::message msg;
+  msg.set_v(12345);
   rpc::Monitor::send(msg, buffer, buffer_len);// 模拟消息发送
-  rpc::Monitor::receive_and_process(buffer, buffer_len);// 模拟消息接收和处理
+  rpc::Monitor::receive_and_process(buffer, buffer_len);// 模拟消息接受和处理
   return 0;
 }
 ```
