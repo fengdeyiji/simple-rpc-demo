@@ -11,10 +11,6 @@ namespace user{
     memcpy(&a, buffer, sizeof(a));
   }
 
-  int message::get_serialize_size() const {
-    return sizeof(a);
-  }
-
   void message::print() const {
     std::cout << a << std::endl;
   }
